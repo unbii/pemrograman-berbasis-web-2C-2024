@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>website engkap</title>
+  <link rel="stylesheet" href="gyhvr.css">
+</head>
+<body>
+  <header>
+    <h1>selamat datang</h1>
+    <nav>
+    <ul>
+     <li><a href="hal1.html">beranda</a></li>
+        <li><a href="hal3.html">tentang</a></li>
+      <li><a href="">produk</a></li>
+   <li><a href="#">kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+  <form onsubmit="redirectToPage2(event)">
+  <main>
+    <section id="form-section">
+      <h2>formulir pendaftaran</h2>
+        <label for="nama">mengisi Nama:</label>
+     <input type="text" id="nama" name="nama" required>
+        <label for="email">mengisi Email:</label>
+        <input type="email" id="email" name="email" required>
+    <label for="tgllahir">mengisi tgl Lahir:</label>
+        <input type="date" id="tgllahir" name="tgllahir" required>
+        <label for="notlp">NoTelepon:</label>
+        <input type="tel" id="notlp" name="notlp" required>
+        <button type="submit">lanjuutt</button>
+      </form>
+    </section>
+  <audio id="latarmusik" src="musikmakanan.mp3.mp3" autoplay loop></audio>
+  <button id="tempat musik">mtikan musik</button>
+  <script>
+    function redirectToPage2(event) {
+        event.preventDefault(); 
+        const nama = document.getElementById("nama").value;
+        const email = document.getElementById("email").value;
+     const notlp = document.getElementById("notlp").value;
+    const tgllahir = document.getElementById("tgllahir").value;
+        localStorage.setItem("nama", nama);
+        localStorage.setItem("email", email);
+        localStorage.setItem("notlp", notlp);
+        localStorage.setItem("tgllahir", tgllahir);
+        window.location.href = "hal2.html";
+      }
+    const music = document.getElementById('latarmusik');
+const toggleMusicBtn = document.getElementById('tempatmusik');
+toggleMusicBtn.addEventListener('click', function() {
+  if (music.paused) {
+    music.play();
+    toggleMusicBtn.textContent = 'Matikan Musik';
+  } else {
+    music.pause();
+    toggleMusicBtn.textContent = 'Putar Musik';
+  }
+});
+  </script>
+</body>
+</html>

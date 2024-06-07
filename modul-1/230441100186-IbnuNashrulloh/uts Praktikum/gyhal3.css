@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.product-list {
+    padding: 20px;
+}
+.product-list ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-list li {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-list li img {
+    width: 100%;
+    height: auto;
+}
+
+.product-list li h3 {
+    margin-top: 10px;
+}
+
+.product-list li p {
+    margin-top: 5px;
+}
+
+.product-list li button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #ef1717;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #29ca09;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

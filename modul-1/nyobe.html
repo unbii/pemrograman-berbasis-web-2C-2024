@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="latian.js"></script>
+</head>
+<body>
+
+    <!-- <h1>belajar js</h1> -->
+<!-- java script inline -->
+    <button onclick="console.log('saya di pencet');">TOMBOL</button>
+    <!-- java script dengn tag script -->
+    <!-- <script>console.log("hai kontak")</script>
+    <h1 id="nama">nama temanku boy</h1>
+    <h2 id="nama">temannya boy adalah reva</h2>
+    <script>
+        const myElement = document.getElementById("nama");
+        myElement.style.color = "red";
+         -->
+    </script>
+    <div class="example">selamat datang di si</div>
+    <p>halo <span class="example">tiyandi</span> , apa kabar</p>
+    <script>
+        const contoh = doccument.getElementsByClassName("example");
+        for (let i = 0; i < contoh.length; i++){
+            contoh[i].style.backgroundColor ="blue";
+        }
+    </script>
+    <button id="play"></button>
+    <script>
+        let play = document.getElementById("play");
+        function playMusic(){
+            let audio = new audio ("");
+            audio.play()
+        }
+        play.addEventListener("click",playMusic)
+    </script>
+</body>
+</html>

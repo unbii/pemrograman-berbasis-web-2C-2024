@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Pengguna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="gayahal2.css" />
+    <link rel="stylesheet" href="gyhvr.css">
+  </head>
+  <body onload="loadUserData()">
+    <header>
+        <h1>Selamat Datang</h1>
+        <nav>
+          <ul>
+            <li><a href="hal1.html">beranda</a></li>
+            <li><a href="#">tentang</a></li>
+            <li><a href="hal3.html">produk</a></li>
+            <li><a href="#">ontak</a></li>
+          </ul>
+        </nav>
+      </header>
+    <h1>data pengguna</h1>
+    <table>
+      <tr>
+        <th>nama</th>
+        <th>email</th>
+        <th>nomor Telepon</th>
+        <th>tanggal Lahir</th>
+      </tr>
+      <tbody id="data-pengguna"></tbody>
+    </table>
+
+    <h2>daftar pengguna</h2>
+    <div id="daftar-pengguna"></div>
+
+    <script>
+      function loadUserData() {
+        const nama = localStorage.getItem("nama");
+        const email = localStorage.getItem("email");
+        const notlp = localStorage.getItem("notlp");
+        const tgllahir = localStorage.getItem("tgllahir");
+        const row = `
+          <tr>
+            <td>${nama}</td>
+            <td>${email}</td>
+            <td>${notlp}</td>
+            <td>${tgllahir}</td>
+          </tr>
+        `;
+        const userDataElement = document.getElementById("data-pengguna");
+        userDataElement.innerHTML = row;
+        const daftarPengguna = document.getElementById("daftar-pengguna");
+        const listItem = `
+          <div class="daftar-item">
+            <span class="label">Nama:</span>
+            <span class="value">${nama}</span>
+          </div>
+        `;
+        daftarPengguna.innerHTML += listItem;
+      }
+    </script>
+<footer>
+    <p>&copy; wb dta</p>
+  </footer>
+  </body>
+</html>
